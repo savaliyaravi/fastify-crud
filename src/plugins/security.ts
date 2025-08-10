@@ -34,6 +34,8 @@ async function securityPlugin(fastify: FastifyInstance) {
     await fastify.register(import('@fastify/compress'), {
       global: true,
       encodings: ['gzip', 'deflate'],
+      // Avoid compressing small JSON bodies so tools like Swagger UI display them cleanly
+      threshold: 1024,
     });
   }
 
