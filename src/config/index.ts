@@ -25,7 +25,7 @@ const envSchema = z.object({
   SECURITY_ENABLE_RATE_LIMIT: z.string().default('true'),
   SECURITY_RATE_LIMIT_MAX: z.string().default('100'),
   SECURITY_RATE_LIMIT_WINDOW_MINUTES: z.string().default('15'),
-  SECURITY_ENABLE_COMPRESS: z.string().default('true'),
+  SECURITY_ENABLE_COMPRESS: z.string().default('false'),
   SECURITY_ENABLE_HELMET: z.string().default('true'),
   SECURITY_ENABLE_CORS: z.string().default('true'),
   SECURITY_ALLOWED_ORIGINS: z.string().default('http://localhost:3000'),
